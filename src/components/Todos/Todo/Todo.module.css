@@ -1,0 +1,44 @@
+.todoItem {
+    padding: 20px;
+    background-color: #9AA0A8;
+    color: white;
+    width: 100%;
+    border-radius: 6px;
+    margin: 10px 0;
+    position: relative;
+    transition: background-color 0.2s ease-out;
+    transition: padding 0.2s ease-out;
+}
+.todoItem:hover, .completed {
+    background-color: #A6B3C4;
+    padding: 20px 20px 20px 50px;
+}
+.todoItem:hover .removeBtn, .todoItem:hover .doneBtn, .completed button {
+    display: block;
+}
+.doneBtn {
+    display: none;
+    position: absolute;
+    top: 20px;
+    left: 10px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+    transition: opacity 0.2s ease-out;
+}
+.removeBtn {
+    display: none;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background-color: transparent;
+    outline: none;
+    border: none;
+}
+.removeBtn:hover, .doneBtn:hover {
+    cursor: pointer;
+}
+.iconCircleBlank, .iconClose, .iconCircleDone {
+    width: 20px;
+    height: 20px;
+}
