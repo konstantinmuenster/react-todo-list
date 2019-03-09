@@ -1,0 +1,16 @@
+{
+  "main.css": "/react-todo-list/static/css/main.074d23fa.chunk.css",
+  "main.js": "/react-todo-list/static/js/main.1b92dda9.chunk.js",
+  "main.js.map": "/react-todo-list/static/js/main.1b92dda9.chunk.js.map",
+  "runtime~main.js": "/react-todo-list/static/js/runtime~main.d51d0b1e.js",
+  "runtime~main.js.map": "/react-todo-list/static/js/runtime~main.d51d0b1e.js.map",
+  "static/js/2.b780763f.chunk.js": "/react-todo-list/static/js/2.b780763f.chunk.js",
+  "static/js/2.b780763f.chunk.js.map": "/react-todo-list/static/js/2.b780763f.chunk.js.map",
+  "index.html": "/react-todo-list/index.html",
+  "precache-manifest.c6d35f692941663a1019cb4bc6e0adfa.js": "/react-todo-list/precache-manifest.c6d35f692941663a1019cb4bc6e0adfa.js",
+  "service-worker.js": "/react-todo-list/service-worker.js",
+  "static/css/main.074d23fa.chunk.css.map": "/react-todo-list/static/css/main.074d23fa.chunk.css.map",
+  "static/media/circle-blank.826537cf.svg": "/react-todo-list/static/media/circle-blank.826537cf.svg",
+  "static/media/circle-done.119e20bf.svg": "/react-todo-list/static/media/circle-done.119e20bf.svg",
+  "static/media/close.68089f4a.svg": "/react-todo-list/static/media/close.68089f4a.svg"
+}
