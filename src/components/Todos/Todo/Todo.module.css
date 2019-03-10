@@ -42,3 +42,11 @@
     width: 20px;
     height: 20px;
 }
+@media only screen and (max-width : 1024px) {
+    .doneBtn, .removeBtn {
+        display: block;
+    }
+    .todoItem {
+        padding: 20px 20px 20px 50px;
+    }
+    }

@@ -9,34 +9,40 @@ class TodoList extends Component {
 
     state = {
         currentInput: '',
-        todos: []
+        todos: [],
+        error: false
     }
 
     onChangeHandler = (event) => {
         this.setState({
-            currentInput: event.target.value
+            currentInput: event.target.value,
+            error: this.state.error ? false : false
         })
     }
 
     onKeyPressHandler = (event) => {
         if (event.key === 'Enter') {
-            const updatedTodos = [...this.state.todos];
-            const newTodo = {
-                id: updatedTodos.length + 1,
-                title: this.state.currentInput,
-                completed: false
-            };
-            updatedTodos.push(newTodo);
-            this.setState({
-                todos: updatedTodos,
-                currentInput: ''
-            });
+            if (this.state.currentInput !== '') {
+                const updatedTodos = [...this.state.todos];
+                const newTodo = {
+                    id: updatedTodos.length + 1,
+                    title: this.state.currentInput,
+                    completed: false
+                };
+                updatedTodos.push(newTodo);
+                this.setState({
+                    todos: updatedTodos,
+                    currentInput: ''
+                });
+            } else {
+                this.setState({error: true});
+            }
           }
     }
 
     removeTodoHandler = (id) => {
-        const updatedTodos = [...this.state.todos];
-        updatedTodos.splice(id-1,1);
+        let updatedTodos = [...this.state.todos];
+        updatedTodos.length === 1 ? updatedTodos = [] : updatedTodos.splice(id-1,1);
         this.setState({
             todos: updatedTodos
         })
@@ -59,8 +65,9 @@ class TodoList extends Component {
                 <InputField
                     value={this.state.currentInput}
                     onChange={this.onChangeHandler}
-                    onKeyPress={this.onKeyPressHandler} />
-                {this.state.todos.length > 0 ? 
+                    onKeyPress={this.onKeyPressHandler}
+                    error={this.state.error} />
+                {this.state.todos ? 
                     (<Todos 
                         list={this.state.todos} 
                         removeTodo={(id) => this.removeTodoHandler(id)} 

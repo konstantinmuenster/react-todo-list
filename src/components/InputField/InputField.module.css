@@ -6,3 +6,6 @@
     border-radius: 6px;
     width: 100%;
 }
+.errorInput {
+    border: 1px solid #F4B4AD;
+}
